@@ -1,0 +1,84 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC-MOVIES</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="./Trabajo-Integrador-Front/styles/styles.css">
+    <link rel="stylesheet" href="./Trabajo-Integrador-Front/styles/responsive.css">
+    <link rel="stylesheet" href="./Trabajo-Integrador-Front/styles/animaciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/assets">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <a class="navbar--logo"  href="#">
+            <i class="fa-solid fa-film" aria-hidden="true"></i>
+            <p class="logo">CAC-Movies</p>
+        </a>
+        <ul class="navbar--list">
+            <li class="navbar--items"><a class="navbar--link " href="pages/Tendencias.html">Tendencias</a></li>
+            <li class="navbar--items"><a class="navbar--link " href="./Trabajo-Integrador-Front/pages/Registro.html">Registrarse</a></li>
+            <li class="navbar--items"><a class="navbar--link login" href="./Trabajo-Integrador-Front/pages/Login.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+  </header>
+    
+      
+    <main id="main" class="main">
+        <section data-aos="zoom-in"  data-aos-duration="1000" class="sectionPrincipal">
+            <h1 class="tituloPrincipal">Películas y series ilimitadas <br> en un solo lugar</h1>
+            <h2 class="subtituloPrincipal">Disfruta donde quieras. <br> Cancela en cualquier momento.</h2>
+            <a class="botonRegistrarse" href="./pages/registrarse.html">Registrate</a>
+        </section>
+        <section data-aos="fade-up" data-aos-offset="300" data-aos-delay="50" data-aos-duration="1000" class="buscadorPrincipal">
+            <h2 class="tituloSection">¿Qué estas buscando para ver?</h2>
+            <form class="buscadorPeliculas">
+                <input class="inputBuscador" type="text" placeholder="Buscar..." id="buscar" name="buscar">
+                <input class="botonBuscador" type="submit" value="Buscar">
+            </form>
+        </section>
+        <hr>
+        <section id="tendencias" data-aos="fade-up" data-aos-offset="400" data-aos-delay="100" data-aos-duration="1000" class="peliculasTendencia">
+            <h3 class="tituloSection">Las tendencias de hoy</h3>
+            <div class="peliculas" id="tendenciasContainer">
+                <!-- Aquí se cargarán las películas tendencia -->
+            </div>
+            <button class="boton anterior">Anterior</button>  
+            <button class="boton siguiente">Siguiente</button>
+        </section>
+        <hr>
+        <section data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="2000" class="peliculasAclamadas">
+            <h3 class="tituloSection">Las más aclamadas</h3>
+            <div class="aclamadas" id="aclamadasContainer">
+                <!-- Aquí se cargarán las películas más aclamadas -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="useful-links-container">
+            <ul class="useful--links">
+                <li class="list--item"><a class="link--nav" href="index.html">Terminos y Condiciones</a></li>
+                <li class="list--item"><a class="link--nav" href="index.html">Preguntas Frecuentes</a></li>
+                <li class="list--item"><a class="link--nav" href="index.html">Ayuda</a></li>
+                <li class="list--item">
+                    <a class="link--nav administrador--peliculas" href="index.html">Administrador Peliculas</a>
+                </li>
+            </ul>
+        </div>
+    
+    
+        <div class="copyright">
+            <p>&copy; 2024 CAC-Movies. Todos los derechos reservados.</p>
+        </div>
+</footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./js/fetch_peliculas.js"></script>
+</body>
+</html>

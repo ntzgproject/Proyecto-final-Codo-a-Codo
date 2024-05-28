@@ -1,0 +1,111 @@
+html{
+    background-image: url(assets/fotoFondo.jpg);
+    background-size: cover;
+
+}
+#register-form{
+    width: 25%;
+    border: 25px solid rgb(41, 39, 39);
+    border-radius: 10px;
+    background-color: rgb(41, 39, 39);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+#register-form h1, label {
+        color: white;
+}
+
+#register-form input, select, #fechaNacimiento {
+    margin-block: 4%;
+    width: 100%;
+    border: 2px solid rgb(163, 47, 47);
+    border-radius: 50px;
+    background-color: rgb(53, 50, 50);
+    color: white;
+}
+#register-form ::placeholder {
+    color: rgb(105, 97, 97);
+}
+
+
+.form-check input{
+    position: relative;
+    right: 56%;
+    bottom: -29px;
+}
+
+.form-check {
+    transform: scale(0.8);
+    position: relative;
+    top: -10px;
+    right: 30px;
+    
+}
+
+#register-form h1{
+    margin-bottom: 8%;
+}
+
+button {
+    width: 100%;
+    background-color: rgb(163, 47, 47);
+    border: 2px solid rgb(163, 47, 47);
+    border-radius: 50px;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    bottom: 30px;
+}
+
+
+/*media querys para mobile PAGINA registrarse*/
+@media (max-width: 1200px) {
+    .bodyRegistrarse{
+        .headerRegistrarse{
+            padding:20px;
+            .anclaLogo{
+                font-size: 1rem;
+            }
+        }
+        .main{
+            .seccionRegistrarse{
+                width: 95%;
+                padding: 10px 10px;
+                .tituloRegistrarse{
+                    font-size: 2rem;
+                }
+               form{
+                width: 100%;
+                text-align: center;
+               
+                input:not(.check,.boton),select{
+                    width: 80%;
+                    height: 35px;
+                    font-size: 1rem;
+                }
+                .terminos{
+                    width: 80%;
+                    margin:0 auto;
+                    font-size: 0.7rem;
+                }
+                .boton{
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    width: 70%;
+                    padding: 0.8rem 0.8rem;
+                    font-size: 0.8rem;
+                }
+                .ayuda{
+                    text-align: left;
+                    font-size: 0.8rem;
+                }
+               }
+               
+            }
+        }
+    }
+
+}
