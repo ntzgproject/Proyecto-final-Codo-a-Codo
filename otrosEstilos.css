@@ -350,3 +350,32 @@
     }
 
 }
+#tendenciasContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    align-items: flex-start;  }
+
+.movie {
+    flex: 0 1 200px; /* Los elementos no crecerán, pero pueden encoger, y la base es de 200px */
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Opcional: Añade sombra para mejor visualización */
+}
+
+.movie img {
+    width: 100%; /* Hace que la imagen se adapte al contenedor .movie */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+.movie h2 {
+    font-size: 16px; /* Reduce el tamaño del título si es necesario */
+    margin-top: 0.5em;
+}
+
+.movie p {
+    font-size: 14px; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}

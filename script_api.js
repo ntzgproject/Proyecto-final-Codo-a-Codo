@@ -3,20 +3,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const apiUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=' + apiKey + '&language=es-ES';
     const options = {method: 'GET', headers: {accept: 'application/json'}};
 
-    fetch(apiUrl, options)  // Asegúrate de usar las opciones si es necesario, aunque en este caso no son necesarias
+    fetch(apiUrl, options)  
         .then(response => response.json())
         .then(data => {
-            console.log(data); // Para depuración
-            displayMovies(data); // Llamar a la función para mostrar las películas
+            console.log(data); 
+            displayMovies(data,"tendenciasContainer");
+            displayMovies(data,"peliculasAclamadas");
+            
+            
         })
         .catch(error => console.error('Error al obtener los datos:', error));
     
-    function displayMovies(data) {
+    function displayMovies(data,container_id) {
         const movies = data.results;
-        const container = document.getElementById('tendenciasContainer');
-        container.innerHTML = ''; // Limpiar contenido anterior
+        const container = document.getElementById(container_id);
+        container.innerHTML = ''; 
         movies.forEach(movie => {
             const movieElement = document.createElement('div');
+            movieElement.classList.add('movie');
             movieElement.innerHTML = `
                 <h2>${movie.title}</h2>
                 <p>${movie.overview}</p>
